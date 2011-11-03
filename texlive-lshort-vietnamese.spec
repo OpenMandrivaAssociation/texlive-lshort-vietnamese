@@ -1,3 +1,9 @@
+# revision 15878
+# category Package
+# catalog-ctan /info/lshort/vietnamese
+# catalog-date 2007-03-09 12:50:50 +0100
+# catalog-license lppl
+# catalog-version 4.00
 Name:		texlive-lshort-vietnamese
 Version:	4.00
 Release:	1
@@ -41,6 +47,7 @@ Vietnamese version of A Short Introduction to LaTeX2e.
 %doc %{_texmfdistdir}/doc/latex/lshort-vietnamese/src/tiengviet.tex
 %doc %{_texmfdistdir}/doc/latex/lshort-vietnamese/src/title.tex
 %doc %{_texmfdistdir}/doc/latex/lshort-vietnamese/src/typeset.tex
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -51,3 +58,5 @@ Vietnamese version of A Short Introduction to LaTeX2e.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar doc %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
