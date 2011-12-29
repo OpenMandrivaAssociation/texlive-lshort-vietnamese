@@ -16,8 +16,6 @@ Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/lshort-vietnamese
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
-Conflicts:	texlive-texmf <= 20110705-3
-Conflicts:	texlive-doc <= 20110705-3
 
 %description
 Vietnamese version of A Short Introduction to LaTeX2e.
@@ -47,7 +45,6 @@ Vietnamese version of A Short Introduction to LaTeX2e.
 %doc %{_texmfdistdir}/doc/latex/lshort-vietnamese/src/tiengviet.tex
 %doc %{_texmfdistdir}/doc/latex/lshort-vietnamese/src/title.tex
 %doc %{_texmfdistdir}/doc/latex/lshort-vietnamese/src/typeset.tex
-%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -58,5 +55,3 @@ Vietnamese version of A Short Introduction to LaTeX2e.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar doc %{buildroot}%{_texmfdistdir}
-mkdir -p %{buildroot}%{_tlpkgobjdir}
-cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
